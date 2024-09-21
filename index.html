@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="demo.js"></script>
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <nav>
+        <div class="navbar">
+          <div class="logo">
+            <h2>Quiz.</h2>
+          </div>
+          <div class="nav-con">
+            <ul>
+              <li class="homebtn">Home</li>
+              <li>About Us</li>
+              <li>Contact</li>
+              <li>Login/Signup</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div class="content">
+          <div class="content-title">
+            <h1>Quick Quiz</h1>
+          </div>
+          <div class="content-description">
+            <center>
+              <p>
+                Challenge your knowledge with our interactive quiz app! Test
+                yourself across various categories,from pop culture to science,
+                and compete with friends for the top score. Fun, fast-paced, and
+                perfect for learning on the go
+              </p>
+            </center>
+          </div>
+          <button class="content-button">Start Quiz</button>
+        </div>
+        <div class="guidelines">
+          <center><h1>Guidelines</h1></center>
+          <ul>
+            <li>
+              1. Select quizzes based on your interests and preferred difficulty
+              level.
+            </li>
+            <li>
+              2. Be mindful of the time limit for each quiz and try to answer
+              within it.
+            </li>
+            <li>
+              3. Stay focused while taking quizzes. Avoid distractions to
+              improve your performance.
+            </li>
+            <li>
+              4. Play fairly and respect the efforts of other participants.
+            </li>
+            <li>5. Do not use external resources during quizzes.</li>
+          </ul>
+          <div class="buttons">
+            <center>
+              <button id="exit-btn">Exit</button>
+              <button id="continue-btn">Continue</button>
+            </center>
+          </div>
+        </div>
+        <div class="quiz-selection">
+          <h1>The Ultimate Quiz</h1>
+          <hr />
+          <h4>In which category do you want to play the quiz?</h4>
+          <select required>
+            <option hidden value="">Select any category</option>
+            <option value="1">General Knowledge</option>
+            <option value="2">Programming</option>
+            <option value="3">Aptitude</option>
+            <option value="4">Sports</option>
+          </select>
+          <h4>How many questions do you want in your quiz?</h4>
+          <select required>
+            <option value="1">1</option>
+            <option value="2">3</option>
+            <option value="3">5</option>
+          </select>
+          <h4>How difficult do you want your quiz to be?</h4>
+          <select required>
+            <option value="1">Easy</option>
+            <option value="2">Medium</option>
+            <option value="3">Hard</option>
+          </select>
+          <center><button>Play Now</button></center>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
