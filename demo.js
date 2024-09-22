@@ -6,30 +6,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const quizSelectionSection = document.querySelector(".quiz-selection");
   const contentSection = document.querySelector(".content");
   const homebtn = document.querySelector(".homebtn")
+  
 
-  // Initially hide the guidelines and quiz selection sections
   guidelinesSection.style.display = "none";
   quizSelectionSection.style.display = "none";
 
-  // Show guidelines when "Start Quiz" button is clicked
   startQuizButton.addEventListener("click", () => {
-    contentSection.style.display = "none"; // Hide content
-    guidelinesSection.style.display = "block"; // Show guidelines
+    contentSection.style.display = "none";
+    guidelinesSection.style.display = "block"; 
   });
 
-  // Exit the guidelines and return to the main content when "Exit" button is clicked
   exitButton.addEventListener("click", () => {
-    guidelinesSection.style.display = "none"; // Hide guidelines
-    contentSection.style.display = "flex"; // Show content again
+    guidelinesSection.style.display = "none"; 
+    contentSection.style.display = "flex";
   });
 
-  // Proceed to quiz selection when the "Continue" button is clicked
+
   continueButton.addEventListener("click", () => {
-    guidelinesSection.style.display = "none"; // Hide guidelines
-    quizSelectionSection.style.display = "flex"; // Show quiz selection
+    guidelinesSection.style.display = "none"; 
+    quizSelectionSection.style.display = "flex"; 
   });
   homebtn.addEventListener("click",() => {
     location.reload()
   })
 });
-
