@@ -160,3 +160,112 @@ hr {
   color: rgb(124, 4, 124);
   border: 2px solid rgb(124, 4, 124);
 }
+.question-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question-box {
+  width: 800px;
+  height: max-content;
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+}
+.question-box h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.answer-btn {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  width: 700px;
+  padding: 10px;
+  margin: 12px 0;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid rgb(124, 4, 124);
+  text-align: left;
+}
+.btn:hover {
+  background: rgba(128, 128, 128, 0.289);
+}
+.nxt-btn {
+  padding: 10px;
+  width: 130px;
+  margin: 10px 0;
+  background: rgb(124, 4, 124);
+  color: white;
+  border: 2px solid rgb(124, 4, 124);
+  border-radius: 4px;
+}
+.nxt-btn:hover {
+  background: white;
+  color: rgb(124, 4, 124);
+  cursor: pointer;
+}
+.question-box hr {
+  height: 3px;
+  width: 700px;
+  background-color: rgb(124, 4, 124);
+}
+#question {
+  margin: 10px 0;
+}
+.result {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  display: none;
+}
+.res-btn {
+  padding: 10px;
+  margin-top: 15px;
+  background-color: rgb(124, 4, 124);
+  color: white;
+  border: 2px solid rgb(124, 4, 124);
+  border-radius: 4px;
+}
+.res-btn:hover {
+  background-color: white;
+  color: rgb(124, 4, 124);
+  cursor: pointer;
+}
+.score {
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+.correct {
+  background-color: #28a745;
+  color: white;
+  border: 2px solid #28a745;
+}
+
+
+.wrong {
+  background-color: #dc3545;
+  color: white;
+  border: 2px solid #dc3545;
+}
+
+.btn.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+a {
+  color: inherit;  
+  text-decoration: none;  
+  cursor: pointer;  
+}
