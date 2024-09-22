@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+          <div class="navbar">
+            <div class="logo">
+              <h2>Quiz.</h2>
+            </div>
+            <div class="nav-con">
+              <ul>
+                <li class="homebtn">Home</li>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>Login/Signup</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="question-container">
+            <div class="question-box">
+                <h1>Quiz</h1>
+                <hr>
+                <div class="quiz">
+                    <h2 id="question">Question</h2>
+                    <div class="answer-btn">
+                        <button class="btn" onclick="selectAnswer(0)">Answer 1</button>
+                        <button class="btn" onclick="selectAnswer(1)">Answer 2</button>
+                        <button class="btn" onclick="selectAnswer(2)">Answer 3</button>
+                        <button class="btn" onclick="selectAnswer(3)">Answer 4</button>
+                    </div>
+                    <center><button class="nxt-btn" onclick="nextQuestion()">Next</button></center>
+                </div>
+                <div class="result">
+                    <h2 class="score">Your Score is <span id="score">0</span> / 5</h2>
+                    <button class="res-btn""><a href="index.html">Play Again</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                question: "What is the capital of France?",
+                answers: ["Rome", "Madrid", "Paris", "Berlin"],
+                correct: 2
+            },
+            {
+                question: "Who wrote the play 'Romeo and Juliet'?",
+                answers: ["William Shakespeare", "Charles Dickens", "J.K. Rowling", "George Orwell"],
+                correct: 0
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                answers: ["Earth", "Mars", "Venus", "Jupiter"],
+                correct: 1
+            },
+            {
+                question: "Who is the current President of the United States? (as of 2024)",
+                answers: ["Joe Biden", "Donald Trump", "Barack Obama", "George W. Bush"],
+                correct: 0
+            },
+            {
+                question: "What is the largest ocean in the world?",
+                answers: ["Indian Ocean", "Atlantic Ocean", "Arctic Ocean", "Pacific Ocean"],
+                correct: 3
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let selected = false;
+
+        const questionElement = document.getElementById("question");
+        const answerButtons = document.querySelectorAll(".btn");
+        const scoreElement = document.getElementById("score");
+
+        document.querySelector(".quiz").style.display = "block";
+        document.querySelector(".result").style.display = "none";
+
+        function loadQuestion() {
+            let currentQuestion = quizData[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+            answerButtons.forEach((button, index) => {
+                button.textContent = currentQuestion.answers[index];
+                button.classList.remove("correct", "wrong", "disabled");
+            });
+            selected = false;
+        }
+
+        function selectAnswer(answerIndex) {
+            if (selected) return; 
+            let currentQuestion = quizData[currentQuestionIndex];
+            selected = true;
+            
+            if (answerIndex === currentQuestion.correct) {
+                score++;
+                answerButtons[answerIndex].classList.add("correct");
+            } else {
+                answerButtons[answerIndex].classList.add("wrong");
+                answerButtons[currentQuestion.correct].classList.add("correct");  
+            }
+            answerButtons.forEach(button => button.classList.add("disabled"));
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.querySelector(".quiz").style.display = "none";
+            document.querySelector(".result").style.display = "flex";
+            scoreElement.textContent = score;
+        }
+        loadQuestion();
+    </script>
+</body>
+</html>
