@@ -7,29 +7,53 @@
 nav {
   color: white;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
+
 .logo {
-  margin-left: 20px;
+  margin-right: 1050px;
   font-size: 25px;
+  font-weight: bold;
 }
+
 .nav-con ul {
   display: flex;
-}
-ul li {
   list-style: none;
-  margin-left: 7px;
-  margin-right: 40px;
-  font-weight: 520;
+  margin: 0;
+  padding: 0;
 }
-ul li:hover {
+
+.nav-con ul li {
+  margin-left: 30px;
+  font-weight: 520;
   cursor: pointer;
+}
+.nav-con ul li button {
+  padding: 8px;
+  background: rgb(124, 4, 124);
+  color: white;
+  border: 3px solid rgba(128, 0, 128, 0.804);
+  cursor: pointer;
+  border-radius: 12px;
+}
+.nav-con ul li button:hover {
+  background: white;
+  color: rgba(128, 0, 128, 0.804);
+}
+
+.nav-con ul li:hover {
   color: orange;
 }
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
 .main-container {
   height: 100vh;
   width: 100%;
@@ -252,7 +276,6 @@ hr {
   border: 2px solid #28a745;
 }
 
-
 .wrong {
   background-color: #dc3545;
   color: white;
@@ -265,7 +288,267 @@ hr {
 }
 
 a {
-  color: inherit;  
-  text-decoration: none;  
-  cursor: pointer;  
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer {
+  background-color: rgb(124, 4, 124);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(124, 4, 124, 0.8);
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+footer a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: orange;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid rgb(124, 4, 124);
+  border-radius: 12px;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(124, 4, 124, 0.6);
+  color: black;
+}
+
+.modal h1 {
+  color: rgb(124, 4, 124);
+  margin-bottom: 20px;
+}
+
+.modal button {
+  padding: 10px;
+  background-color: rgb(124, 4, 124);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.modal button:hover {
+  background-color: white;
+  color: rgb(124, 4, 124);
+  border: 2px solid rgb(124, 4, 124);
+  cursor: pointer;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(124, 4, 124, 0.6);
+}
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid rgb(124, 4, 124);
+  border-radius: 8px;
+}
+
+form button {
+  padding: 10px;
+  background-color: rgb(124, 4, 124);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: white;
+  color: rgb(124, 4, 124);
+  border: 2px solid rgb(124, 4, 124);
+  cursor: pointer;
+}
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(124, 4, 124, 0.6);
+  padding: 20px;
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  color: rgb(124, 4, 124);
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: black;
+}
+
+.card button {
+  padding: 10px;
+  background-color: rgb(124, 4, 124);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.card button:hover {
+  background-color: white;
+  color: rgb(124, 4, 124);
+  border: 2px solid rgb(124, 4, 124);
+  cursor: pointer;
+}
+.auth-container {
+  width: 400px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(124, 4, 124, 0.6);
+}
+
+.auth-container h1 {
+  color: rgb(124, 4, 124);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid rgb(124, 4, 124);
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(124, 4, 124);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: white;
+  color: rgb(124, 4, 124);
+  border: 2px solid rgb(124, 4, 124);
+  cursor: pointer;
+}
+.form-container p {
+  color: black;
+  font-size: 16px;
+}
+
+.form-container span {
+  color: rgb(124, 4, 124);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-container span:hover {
+  color: orange;
+}
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  width: 350px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container h1 {
+  color: rgb(124, 4, 124);
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid rgb(159, 4, 159);
+  outline: none;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(124, 4, 124);
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: white;
+  color: rgb(124, 4, 124);
+  border: 2px solid rgb(124, 4, 124);
+}
+
+.auth-container p {
+  margin-top: 15px;
+  color: black;
+}
+
+.auth-container span {
+  color: rgb(124, 4, 124);
+  cursor: pointer;
+}
+
+.auth-container span:hover {
+  text-decoration: underline;
 }
